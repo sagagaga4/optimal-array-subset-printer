@@ -10,7 +10,7 @@ void swap(int *a, int *b)
 int partition(int arr[], int low, int high)
 {
     int pivot = arr[high];
-    int i = (low - 1);  // Corrected from (low -i)
+    int i = (low - 1);  
     for(int j = low; j <= high - 1; j++)
     {
         if(arr[j] < pivot)
@@ -25,7 +25,7 @@ int partition(int arr[], int low, int high)
 
 void QuickSort(int arr[], int low, int high)
 {
-    if(low < high)  // Changed from <= to 
+    if(low < high)  
     {
         int pi = partition(arr, low, high);
         QuickSort(arr, low, pi - 1);
@@ -37,7 +37,7 @@ void printArr(int arr[], int size)
 {
     for(int i = 0; i < size; i++)
     {
-        printf("%d ", arr[i]);  // Added space for better readability
+        printf("%d ", arr[i]);  
     }
     printf("\n");
 }
@@ -53,7 +53,7 @@ void print_max(int a[], int n, int max)
     printf("Sorted array: ");
     printArr(a, n);
     
-    int temp[n];  // Allocate array of size n
+    int temp[n];  
     int index = 0;
     int sum = 0;
     for(int i = 0; i < n; i++)
@@ -78,7 +78,7 @@ int main()
 {
     int arr[] = {12, 37, 38, 39, -15, -8, 6, 1};
     int n = sizeof(arr) / sizeof(arr[0]);
-    int max = 50;  // Set a meaningful value for max
+    int max = 50;  
     print_max(arr, n, max);
     return 0;
 }
